@@ -1,70 +1,167 @@
-# Getting Started with Create React App
+# Arul Kumar - Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A stunning, interactive 3D portfolio website showcasing the work and skills of Arul Kumar, a Mobile Application Developer from Chennai, India.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **3D Interactive Elements**: Powered by Three.js and React Three Fiber
+- **Smooth Animations**: Using Framer Motion for seamless page transitions
+- **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
+- **Dark Theme**: Modern dark theme with vibrant accent colors
+- **Sections**:
+  - Hero with 3D floating shapes
+  - About with animated statistics
+  - Experience timeline with expandable project cards
+  - Projects showcase with 3D tilt effects
+  - Skills with 3D visualization
+  - Contact form with validation
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Framework**: React 19
+- **Styling**: Tailwind CSS
+- **3D Graphics**: Three.js, React Three Fiber, @react-three/drei
+- **Animations**: Framer Motion
+- **Build Tool**: Create React App
+- **Additional Libraries**: React Spring, clsx, tailwind-merge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Installation
 
-### `npm test`
+1. Clone the repository:
+```bash
+git clone https://github.com/Arulkumar-15/portfolio.git
+cd portfolio
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Start the development server:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application will open at `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏗️ Build for Production
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run build
+```
 
-### `npm run eject`
+This creates an optimized production build in the `build` folder.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+├── components/
+│   ├── 3d/                 # Three.js 3D components
+│   │   ├── FloatingShape.jsx
+│   │   └── ParticleField.jsx
+│   ├── layout/             # Layout components
+│   │   ├── Navbar.jsx
+│   │   └── Footer.jsx
+│   └── sections/           # Page sections
+│       ├── Hero.jsx
+│       ├── About.jsx
+│       ├── Experience.jsx
+│       ├── Projects.jsx
+│       ├── Skills.jsx
+│       └── Contact.jsx
+├── data/
+│   └── portfolio.js        # Portfolio data
+├── hooks/                  # Custom React hooks
+│   ├── useScrollAnimation.js
+│   └── useMousePosition.js
+├── utils/
+│   └── cn.js              # Utility functions
+├── App.js                 # Main app component
+└── index.css              # Global styles
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 Customization
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Update Personal Information
 
-## Learn More
+Edit `src/data/portfolio.js` to update:
+- Personal information
+- Skills
+- Experience
+- Projects
+- Education
+- Certifications
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Modify Colors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Update the color scheme in `tailwind.config.js`:
+```javascript
+colors: {
+  primary: { ... },
+  purple: { ... },
+  dark: { ... }
+}
+```
 
-### Code Splitting
+### Add New Sections
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Create a new component in `src/components/sections/`
+2. Import and add it to `src/App.js`
+3. Update the navigation in `src/components/layout/Navbar.jsx`
 
-### Analyzing the Bundle Size
+## 🌐 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Deploy to Vercel
 
-### Making a Progressive Web App
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Deploy automatically
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Deploy to Netlify
 
-### Advanced Configuration
+1. Build the project: `npm run build`
+2. Drag and drop the `build` folder to [Netlify](https://netlify.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Deploy to GitHub Pages
 
-### Deployment
+```bash
+npm install gh-pages --save-dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Add to `package.json`:
+```json
+"homepage": "https://yourusername.github.io/portfolio",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
 
-### `npm run build` fails to minify
+Deploy:
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📧 Contact
+
+- **Email**: arulkumar1551990@gmail.com
+- **Phone**: +91 7824024171
+- **LinkedIn**: [linkedin.com/in/arul-kumar-055b22249/](https://linkedin.com/in/arul-kumar-055b22249/)
+- **GitHub**: [github.com/Arulkumar-15](https://github.com/Arulkumar-15)
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 🙏 Acknowledgments
+
+- Three.js and React Three Fiber community
+- Framer Motion team
+- Tailwind CSS team
+- All open-source contributors
+
+---
+
+Made with ❤️ by Arul Kumar
